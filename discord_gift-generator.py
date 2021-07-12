@@ -1,8 +1,16 @@
 import requests
 
+import os
+
 import time
 
 import random
+
+os.system("clear")
+
+os.system("figlet Discord Nitro generator")
+
+print("                     made by NacreousDawn596")
 
 def start():
 
