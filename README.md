@@ -3,4 +3,4 @@ a simple python code that generate discord gift links, verify them and store the
 
 #HOW TO USE IT:
 
-sudo apt-get install python3 figlet && cd Discord-gift_generator && chmod u+x discord-gift_generator.py && python3 discord-gift_generator.py
+sudo apt-get install python3 python3-pip figlet && pip install requests && cd Discord-gift_generator && chmod u+x discord-gift_generator.py && python3 discord-gift_generator.py
