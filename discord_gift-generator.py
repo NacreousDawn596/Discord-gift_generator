@@ -72,7 +72,7 @@ def start():
 
 		file.close()
 
-	elif gift == "You are being rate limited.":
+	elif gift == "The resource is being rate limited.":
 
 		s = nitro['retry_after']
 
