@@ -22,7 +22,7 @@ def start():
 
 	string= "a z e r t y u i o p q s d f g h j k l m w x c v b n A Z E R T Y U I O P Q S D F G H J K L M W X C V B N 1 2 3 4 5 6 7 8 9 0"
 
-	string = string.split(" ")
+	string = string.split()
 
 	if choice[0] == 0:
 
@@ -36,7 +36,7 @@ def start():
 
 		link = f"https://discord.gift/{var}"
 
-		url = f"https://discord.com/api/v9/entitlements/gift-codes/{var}"
+		url = f"https://discordapp.com/api/v9/entitlements/gift-codes/{var}?with_application=false&with_subscription_plan=true"
 
 	else:
 
@@ -50,15 +50,9 @@ def start():
 	
 		link = f"https://discord.gift/{var}"
 
-		url = f"https://discord.com/api/v9/entitlements/gift-codes/{var}"
+		url = f"https://discordapp.com/api/v9/entitlements/gift-codes/{var}?with_application=false&with_subscription_plan=true"
 
-	request = requests.get(url)
-
-	nitro = request.json()
-
-	gift = nitro['message']
-
-	if gift == "Unknown Gift Code":
+	if "200" not in requests.get(url):
 
 		print("")
 
@@ -72,7 +66,7 @@ def start():
 
 		file.close()
 
-	elif gift == "The resource is being rate limited.":
+	elif gift == "You are being rate limited.":
 
 		s = nitro['retry_after']
 
