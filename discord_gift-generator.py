@@ -66,20 +66,6 @@ def start():
 
 		file.close()
 
-	elif gift == "You are being rate limited.":
-
-		s = nitro['retry_after']
-
-		while s >= 0:
-
-			print("")
-
-			print("retry after ", s, "seconds")
-
-			time.sleep(1)
-
-			s -= 1
-
 	else: 
 
 		print("")
